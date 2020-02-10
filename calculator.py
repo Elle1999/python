@@ -7,12 +7,10 @@ print('C - cosine')
 print('T - tangent')
 print('R - square root')
 print('N - natural log')
-print('X - eXit the program')
+print('X 0- eXit the program')
 
-f = input('Please enter a function and a value: ')
-if f != 'x' and f != 'X':
-    v = float(input())
-
+f, v = input("Please enter a function and a value ").split(" ")
+v = float(v)
 while f != 'X' and f != 'x':
     if f == 'S' or f == 's' :
         calculation = math.sin(v)
@@ -32,8 +30,7 @@ while f != 'X' and f != 'x':
         print('Thanks for using the calculator')
     
     if f != 'X' and f != 'x':
-        f = input('Please enter a function and a value: ')
-        if f != 'X' and f != 'x':
-           v = float(input())
+       f, v = input("Please enter a function and a value ").split(" ")
+       v = float(v)
 
 print('Thanks for using the calculator')
